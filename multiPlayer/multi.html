@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="multi.css">
     <script src="multi.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <title>Multiplayer</title>
 </head>
 
@@ -18,6 +19,45 @@
             <span>Enjoy With Your Friends</span>
         </div>
     </nav>
+    <main>
+        <aside>
+            <div class="playerInput">
+                <input type="text" Value="Player1" id="Player1">
+                <input type="text" Value="Player2">
+            </div>
+            <div class="scoreCard">
+                <span id="p1Score" class="Score">0</span>
+                <span id="p2Score" class="Score">0</span>
+            </div>
+            <div class="navoptions">
+                <a href="#" class="navlinks" id="Home">
+                    <lord-icon src="https://cdn.lordicon.com/wmwqvixz.json" trigger="hover"
+                        style="width:25px;height:25px">
+                    </lord-icon>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="navlinks" id="Reset">
+                    <lord-icon src="https://cdn.lordicon.com/ogkflacg.json" trigger="hover"
+                        style="width:25px;height:25px;">
+                    </lord-icon>
+                    <span>Reset</span>
+                </a>
+                <a href="#" class="navlinks" id="SingPlay">
+                    <lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover"
+                        style="width:25px;height:25px">
+                    </lord-icon>
+                    <span>Single Player</span>
+                </a>
+            </div>
+            <div class="playFirst">
+                <span>Play First :- </span>
+                <label for="P1" id="P1Label"></label>
+                <input type="radio" name="PFirst" id="P1">
+                <input type="radio" name="PFirst" id="P2">
+            </div>
+        </aside>
+        <div class="game"></div>
+    </main>
 </body>
 
 </html>

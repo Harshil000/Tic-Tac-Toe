@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-nav{
+nav {
     height: 10vh;
     width: 100%;
     background-color: rgb(32, 30, 30);
@@ -15,13 +15,123 @@ nav{
     justify-content: space-evenly;
 }
 
-.navHeading{
+.navHeading {
     font-size: 25px;
 }
 
-.navDesc{
+.navDesc {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2px;
+}
+
+main {
+    height: calc(100vh - 10vh);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+aside {
+    height: 98%;
+    width: 30%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.playerInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+}
+
+input {
+    width: 48%;
+    padding: 8px 4px;
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    transition: all .5s ease;
+}
+
+input:focus{
+    outline: 2px solid red;
+    border: none;
+}
+
+.scoreCard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.Score{
+    width: 48%;
+    text-align: center;
+    border: 2px dotted red;
+    padding: 2px 0px;
+    border-top: none;
+}
+
+.navoptions{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(198, 198, 198);
+    padding: 6px 6px;
+    border-radius: 8px;
+    width: 28%;
+}
+
+#Home:hover{
+    background-color: red;
+    color: white;
+}
+
+#Reset:hover{
+    background-color: chartreuse;
+    color: red;
+}
+
+#SingPlay:hover{
+    background-color: rgb(72, 72, 248);
+    color: white;
+}
+
+.playFirst{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#P1 , #P2 {
+    display: none;
+}
+
+.game {
+    height: 98%;
+    width: 68%;
+    border: 2px solid green;
 }
