@@ -102,6 +102,7 @@ input:focus{
     padding: 6px 6px;
     border-radius: 8px;
     width: 28%;
+    transition: all .25s ease;
 }
 
 #Home:hover{
@@ -126,8 +127,20 @@ input:focus{
     justify-content: space-evenly;
 }
 
-#P1 , #P2 {
-    display: none;
+.radioBTN{
+    /* border: 2px solid black; */
+    padding: 6px 0px;
+    background-color: rgb(193, 190, 190);
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.radioBTN:hover{
+    background-color: blue;
+    color: white;
 }
 
 .game {

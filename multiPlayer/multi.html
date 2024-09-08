@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="multi.css">
-    <script src="multi.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <title>Multiplayer</title>
 </head>
@@ -22,8 +21,8 @@
     <main>
         <aside>
             <div class="playerInput">
-                <input type="text" Value="Player1" id="Player1">
-                <input type="text" Value="Player2">
+                <input type="text" Value="Player1" id="Player1" onchange="ChangePlayersName()">
+                <input type="text" Value="Player2" id="Player2" onchange="ChangePlayersName()">
             </div>
             <div class="scoreCard">
                 <span id="p1Score" class="Score">0</span>
@@ -50,14 +49,14 @@
                 </a>
             </div>
             <div class="playFirst">
-                <span>Play First :- </span>
-                <label for="P1" id="P1Label"></label>
-                <input type="radio" name="PFirst" id="P1">
-                <input type="radio" name="PFirst" id="P2">
+                <span style="width: 30%; font-weight: 600; text-align: center;">Play First :- </span>
+                <label for="P1" id="P1Label" class="radioBTN" data-name="player1"=""></label>
+                <label for="P2" id="P2Label" class="radioBTN" data-name="player2"></label>
             </div>
         </aside>
         <div class="game"></div>
     </main>
 </body>
+<script src="/multiPlayer/multi.js"></script>
 
 </html>
