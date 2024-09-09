@@ -63,12 +63,12 @@ input {
     transition: all .5s ease;
 }
 
-input:focus{
+input:focus {
     outline: 2px solid red;
     border: none;
 }
 
-.scoreCard{
+.scoreCard {
     width: 100%;
     display: flex;
     align-items: center;
@@ -76,7 +76,7 @@ input:focus{
     gap: 4px;
 }
 
-.Score{
+.Score {
     width: 48%;
     text-align: center;
     border: 2px dotted red;
@@ -84,14 +84,14 @@ input:focus{
     border-top: none;
 }
 
-.navoptions{
+.navoptions {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.navlinks{
+.navlinks {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,31 +103,32 @@ input:focus{
     border-radius: 8px;
     width: 28%;
     transition: all .25s ease;
+    cursor: pointer;
 }
 
-#Home:hover{
+#Home:hover {
     background-color: red;
     color: white;
 }
 
-#Reset:hover{
+#Reset:hover {
     background-color: chartreuse;
     color: red;
 }
 
-#SingPlay:hover{
+#SingPlay:hover {
     background-color: rgb(72, 72, 248);
     color: white;
 }
 
-.playFirst{
+.playFirst {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.radioBTN{
+.radioBTN {
     /* border: 2px solid black; */
     padding: 6px 0px;
     background-color: rgb(193, 190, 190);
@@ -138,7 +139,19 @@ input:focus{
     cursor: pointer;
 }
 
-.radioBTN:hover{
+.radioBTN:hover {
+    background-color: blue;
+    color: white;
+}
+
+.ChooseLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.selectedRadio {
     background-color: blue;
     color: white;
 }
