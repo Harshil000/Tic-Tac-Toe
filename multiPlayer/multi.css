@@ -37,7 +37,6 @@ main {
 aside {
     height: 98%;
     width: 30%;
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -159,7 +158,6 @@ input:focus {
 .game {
     height: 98%;
     width: 68%;
-    /* border: 2px solid green; */
     display: flex;
     align-items: center;
     justify-content: center;

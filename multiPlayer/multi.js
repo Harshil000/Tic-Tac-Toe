@@ -64,6 +64,14 @@ boxes.forEach(e => {
     })
 });
 
+function CheckWinner() {
+    if ((box1.innerHTML == "O" && box2.innerHTML == "O" && box3.innerHTML == "O") || (box4.innerHTML == "O" && box5.innerHTML == "O" && box6.innerHTML == "O") || (box7.innerHTML == "O" && box8.innerHTML == "O" && box9.innerHTML == "O") || (box1.innerHTML == "O" && box4.innerHTML == "O" && box7.innerHTML == "O") || (box2.innerHTML == "O" && box5.innerHTML == "O" && box8.innerHTML == "O") || (box3.innerHTML == "O" && box6.innerHTML == "O" && box9.innerHTML == "O") || (box1.innerHTML == "O" && box5.innerHTML == "O" && box9.innerHTML == "O") || (box3.innerHTML == "O" && box5.innerHTML == "O" && box7.innerHTML == "O")) {
+        alert("O is Winner")
+    } else if ((box1.innerHTML == "X" && box2.innerHTML == "X" && box3.innerHTML == "X") || (box4.innerHTML == "X" && box5.innerHTML == "X" && box6.innerHTML == "X") || (box7.innerHTML == "X" && box8.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box4.innerHTML == "X" && box7.innerHTML == "X") || (box2.innerHTML == "X" && box5.innerHTML == "X" && box8.innerHTML == "X") || (box3.innerHTML == "X" && box6.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box5.innerHTML == "X" && box9.innerHTML == "X") || (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X")) {
+        alert("X is Winner")
+    }
+}
+
 function CheckReady(e) {
     if (Player == "NONE" || ChooseO == "NONE") {
         alert("At first please select Who wants to play first and who wants to play O")
@@ -72,12 +80,18 @@ function CheckReady(e) {
         if (e.innerHTML == "X" || e.innerHTML == "O") {
             alert("Please Click on Empty Box")
         } else {
-            if(Player == "player1"){
+            if (Player == "player1") {
                 e.innerHTML = player1
                 Player = "player2"
-            }else{
+                setTimeout(() => {
+                    CheckWinner()
+                }, 250)
+            } else {
                 e.innerHTML = player2
                 Player = "player1"
+                setTimeout(() => {
+                    CheckWinner()
+                }, 250)
             }
         }
     }
