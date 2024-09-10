@@ -159,5 +159,32 @@ input:focus {
 .game {
     height: 98%;
     width: 68%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    transition: all .5s ease;
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover{
+    transform: scale(1.03);
+    cursor: pointer;
 }
