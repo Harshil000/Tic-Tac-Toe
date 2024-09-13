@@ -2,6 +2,7 @@ let Player = "NONE"
 let ChooseO = "NONE"
 let player1
 let player2
+let Winner = ""
 
 document.getElementById("P1Label").innerHTML = document.getElementById("Player1").value
 document.getElementsByClassName("radioBTN")[2].innerHTML = document.getElementById("Player1").value
@@ -66,9 +67,15 @@ boxes.forEach(e => {
 
 function CheckWinner() {
     if ((box1.innerHTML == "O" && box2.innerHTML == "O" && box3.innerHTML == "O") || (box4.innerHTML == "O" && box5.innerHTML == "O" && box6.innerHTML == "O") || (box7.innerHTML == "O" && box8.innerHTML == "O" && box9.innerHTML == "O") || (box1.innerHTML == "O" && box4.innerHTML == "O" && box7.innerHTML == "O") || (box2.innerHTML == "O" && box5.innerHTML == "O" && box8.innerHTML == "O") || (box3.innerHTML == "O" && box6.innerHTML == "O" && box9.innerHTML == "O") || (box1.innerHTML == "O" && box5.innerHTML == "O" && box9.innerHTML == "O") || (box3.innerHTML == "O" && box5.innerHTML == "O" && box7.innerHTML == "O")) {
-        alert("O is Winner")
+        if (player1 == "O") {
+            Winner = document.getElementsByClassName("radioBTN")[2].innerHTML;
+            alert(Winner + " Is Winner")
+        }
     } else if ((box1.innerHTML == "X" && box2.innerHTML == "X" && box3.innerHTML == "X") || (box4.innerHTML == "X" && box5.innerHTML == "X" && box6.innerHTML == "X") || (box7.innerHTML == "X" && box8.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box4.innerHTML == "X" && box7.innerHTML == "X") || (box2.innerHTML == "X" && box5.innerHTML == "X" && box8.innerHTML == "X") || (box3.innerHTML == "X" && box6.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box5.innerHTML == "X" && box9.innerHTML == "X") || (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X")) {
-        alert("X is Winner")
+        if (player1 == "X") {
+            Winner = document.getElementsByClassName("radioBTN")[3].innerHTML;
+            alert(Winner + " Is Winner")
+        }
     }
 }
 
@@ -81,17 +88,25 @@ function CheckReady(e) {
             alert("Please Click on Empty Box")
         } else {
             if (Player == "player1") {
-                e.innerHTML = player1
-                Player = "player2"
-                setTimeout(() => {
-                    CheckWinner()
-                }, 250)
+                if (Winner == "") {
+                    e.innerHTML = player1
+                    Player = "player2"
+                    setTimeout(() => {
+                        CheckWinner()
+                    }, 250)
+                } else {
+                    alert(Winner + " is Winner")
+                }
             } else {
-                e.innerHTML = player2
-                Player = "player1"
-                setTimeout(() => {
-                    CheckWinner()
-                }, 250)
+                if (Winner == "") {
+                    e.innerHTML = player2
+                    Player = "player1"
+                    setTimeout(() => {
+                        CheckWinner()
+                    }, 250)
+                }else{
+                    alert(Winner + " is Winner")
+                }
             }
         }
     }
