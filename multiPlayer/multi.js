@@ -90,28 +90,24 @@ function CheckReady(e) {
         alert("At first please select Who wants to play first and who wants to play O")
     }
     else {
-        if (e.innerHTML == "X" || e.innerHTML == "O") {
-            alert("Please Click on Empty Box")
+        if (Winner != "") {
+            alert(Winner + " is Winner")
         } else {
-            if (Player == "player1") {
-                if (Winner == "") {
+            if (e.innerHTML == "X" || e.innerHTML == "O") {
+                alert("Please Click on Empty Box")
+            } else {
+                if (Player == "player1") {
                     e.innerHTML = player1
                     Player = "player2"
                     setTimeout(() => {
                         CheckWinner()
                     }, 250)
                 } else {
-                    alert(Winner + " is Winner")
-                }
-            } else {
-                if (Winner == "") {
                     e.innerHTML = player2
                     Player = "player1"
                     setTimeout(() => {
                         CheckWinner()
                     }, 250)
-                } else {
-                    alert(Winner + " is Winner")
                 }
             }
         }
