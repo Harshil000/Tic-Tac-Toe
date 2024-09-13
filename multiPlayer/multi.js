@@ -69,10 +69,16 @@ function CheckWinner() {
     if ((box1.innerHTML == "O" && box2.innerHTML == "O" && box3.innerHTML == "O") || (box4.innerHTML == "O" && box5.innerHTML == "O" && box6.innerHTML == "O") || (box7.innerHTML == "O" && box8.innerHTML == "O" && box9.innerHTML == "O") || (box1.innerHTML == "O" && box4.innerHTML == "O" && box7.innerHTML == "O") || (box2.innerHTML == "O" && box5.innerHTML == "O" && box8.innerHTML == "O") || (box3.innerHTML == "O" && box6.innerHTML == "O" && box9.innerHTML == "O") || (box1.innerHTML == "O" && box5.innerHTML == "O" && box9.innerHTML == "O") || (box3.innerHTML == "O" && box5.innerHTML == "O" && box7.innerHTML == "O")) {
         if (player1 == "O") {
             Winner = document.getElementsByClassName("radioBTN")[2].innerHTML;
-            alert(Winner + " Is Winner")
+            alert(Winner + " is Winner")
+        } else {
+            Winner = document.getElementsByClassName("radioBTN")[3].innerHTML;
+            alert(Winner + " is Winner")
         }
     } else if ((box1.innerHTML == "X" && box2.innerHTML == "X" && box3.innerHTML == "X") || (box4.innerHTML == "X" && box5.innerHTML == "X" && box6.innerHTML == "X") || (box7.innerHTML == "X" && box8.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box4.innerHTML == "X" && box7.innerHTML == "X") || (box2.innerHTML == "X" && box5.innerHTML == "X" && box8.innerHTML == "X") || (box3.innerHTML == "X" && box6.innerHTML == "X" && box9.innerHTML == "X") || (box1.innerHTML == "X" && box5.innerHTML == "X" && box9.innerHTML == "X") || (box3.innerHTML == "X" && box5.innerHTML == "X" && box7.innerHTML == "X")) {
         if (player1 == "X") {
+            Winner = document.getElementsByClassName("radioBTN")[2].innerHTML;
+            alert(Winner + " Is Winner")
+        } else {
             Winner = document.getElementsByClassName("radioBTN")[3].innerHTML;
             alert(Winner + " Is Winner")
         }
@@ -104,7 +110,7 @@ function CheckReady(e) {
                     setTimeout(() => {
                         CheckWinner()
                     }, 250)
-                }else{
+                } else {
                     alert(Winner + " is Winner")
                 }
             }
