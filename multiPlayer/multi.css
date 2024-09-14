@@ -155,6 +155,27 @@ input:focus {
     color: white;
 }
 
+.clearBTN {
+    width: 98%;
+    padding: 8px 0px;
+    background-color: rgb(110, 110, 110);
+    border-radius: 14px;
+    text-align: center;
+    cursor: no-drop;
+    transition: all .5s ease;
+}
+
+.readyClearBTN {
+    cursor: pointer;
+    background-color: rgb(193, 190, 190);
+}
+
+.readyClearBTN:hover {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    font-weight: 600;
+}
+
 .game {
     height: 98%;
     width: 68%;
@@ -165,14 +186,14 @@ input:focus {
     gap: 4px;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
 }
 
-.box{
+.box {
     height: 200px;
     width: 200px;
     transition: all .5s ease;
@@ -182,7 +203,7 @@ input:focus {
     justify-content: center;
 }
 
-.box:hover{
+.box:hover {
     transform: scale(1.03);
     cursor: pointer;
 }
