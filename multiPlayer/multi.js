@@ -111,6 +111,18 @@ function CheckWinner() {
             let score = parseInt(document.getElementById("p2Score").innerHTML)
             document.getElementById("p2Score").innerHTML = score + 1;
         }
+    } else if (box1.innerHTML != "" && box2.innerHTML != "" && box3.innerHTML != "" && box4.innerHTML != "" && box5.innerHTML != "" && box6.innerHTML != "" && box7.innerHTML != "" && box8.innerHTML != "" && box9.innerHTML != ""){
+        document.getElementsByClassName("clearBTN")[0].classList.add("readyClearBTN")
+        document.getElementsByClassName("readyClearBTN")[0].addEventListener('click', () => {
+            Winner = ""
+            Player = initialPlayer
+            boxes.forEach(e => {
+                e.innerHTML = ""
+            })
+            document.getElementsByClassName("clearBTN")[0].classList.remove("readyClearBTN")
+        })
+        Winner = "Tie"
+        alert("Tie")
     }
 }
 

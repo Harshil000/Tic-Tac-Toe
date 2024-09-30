@@ -1,13 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="single.css">
-    <script src="single.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <title>Single Player</title>
 </head>
+
 <body>
-    
+    <nav>
+        <div class="navHeading">TIC-TAC-TOE</div>
+        <div class="navDesc">
+            <span>Play Alone</span>
+            <span style="color: red;">&bull;</span>
+            <span>Play with computer</span>
+        </div>
+    </nav>
+    <main>
+        <aside>
+            <div style="display: flex; align-items: center; justify-content: space-evenly; width: 100%;">
+                <span class="scorePlateName">Me</span>
+                <span class="scorePlateName">Computer</span>
+            </div>
+            <div class="scoreBoard">
+                <span class="scorePlate">0</span>
+                <span class="scorePlate">0</span>
+            </div>
+            <div class="navoptions">
+                <a href="/index.html" class="navlinks" id="Home">
+                    <lord-icon src="https://cdn.lordicon.com/wmwqvixz.json" trigger="hover"
+                        style="width:25px;height:25px">
+                    </lord-icon>
+                    <span>Home</span>
+                </a>
+                <span href="#" class="navlinks" id="Reset">
+                    <lord-icon src="https://cdn.lordicon.com/ogkflacg.json" trigger="hover"
+                        style="width:25px;height:25px;">
+                    </lord-icon>
+                    <span>Reset</span>
+                </span>
+                <a href="/multiPlayer/multi.html" class="navlinks" id="SingPlay">
+                    <lord-icon src="https://cdn.lordicon.com/hrjifpbq.json" trigger="hover"
+                        style="width:25px;height:25px">
+                    </lord-icon>
+                    <span>Multi Player</span>
+                </a>
+            </div>
+            <div class="playFirst">
+                <span style="width: 30%; font-weight: 600; text-align: center;">Play First :- </span>
+                <span id="P1Label" class="radioBTN" data-name="player1">Me</span>
+                <span id="P2Label" class="radioBTN" data-name="player2">Computer</span>
+            </div>
+            <div class="ChooseLogo">
+                <span style="width: 30%; font-weight: 600; text-align: center;">Choose O :-</span>
+                <span class="radioBTN" data-name="player1">Me</span>
+                <span class="radioBTN" data-name="player2">Computer</span>
+            </div>
+            <div class="GameStartBTN GameStartBTNWorking">
+                Start Game
+            </div>
+            <div class="clearBTN">
+                Clear Game
+            </div>
+        </aside>
+        <div class="game">
+            <div class="row">
+                <div class="box" style="border-bottom: 2px solid black; border-right: 2px solid black;"></div>
+                <div class="box"
+                    style="border-bottom: 2px solid black; border-left: 2px solid black; border-right: 2px solid black;">
+                </div>
+                <div class="box" style="border-bottom: 2px solid black; border-left: 2px solid black;"></div>
+            </div>
+            <div class="row">
+                <div class="box"
+                    style="border-bottom: 2px solid black; border-right: 2px solid black; border-top: 2px solid black;">
+                </div>
+                <div class="box" style="border: 2px solid black;"></div>
+                <div class="box"
+                    style="border-bottom: 2px solid black; border-left: 2px solid black; border-top: 2px solid black;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="box" style="border-top: 2px solid black; border-right: 2px solid black;"></div>
+                <div class="box"
+                    style="border-top: 2px solid black; border-right: 2px solid black; border-left: 2px solid black;">
+                </div>
+                <div class="box" style="border-top: 2px solid black; border-left: 2px solid black;"></div>
+            </div>
+        </div>
+    </main>
 </body>
+<script src="single.js"></script>
+
 </html>

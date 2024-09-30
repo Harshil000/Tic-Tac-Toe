@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(32, 30, 30);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navHeading {
+    font-size: 25px;
+}
+
+.navDesc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: calc(100vh - 10vh);
+}
+
+aside {
+    height: 98%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 5px 5px;
+}
+
+.scoreBoard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.scorePlate {
+    width: 48%;
+    padding: 2px 0px;
+    border-bottom: 2px dotted red;
+    border-right: 2px dotted red;
+    border-left: 2px dotted red;
+    text-align: center;
+}
+
+.scorePlateName {
+    text-align: center;
+    width: 48%;
+    border: 2px solid blue;
+    padding: 6px 0px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.navoptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(198, 198, 198);
+    padding: 6px 6px;
+    border-radius: 8px;
+    width: 28%;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+#Home:hover {
+    background-color: red;
+    color: white;
+}
+
+#Reset:hover {
+    background-color: chartreuse;
+    color: red;
+}
+
+#SingPlay:hover {
+    background-color: rgb(72, 72, 248);
+    color: white;
+}
+
+.playFirst {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.radioBTN {
+    /* border: 2px solid black; */
+    padding: 6px 0px;
+    background-color: rgb(193, 190, 190);
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    transition: all .25s ease;
+    cursor: pointer;
+}
+
+.radioBTN:hover {
+    background-color: blue;
+    color: white;
+}
+
+.ChooseLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.selectedRadio {
+    background-color: blue;
+    color: white;
+}
+
+.GameStartBTN {
+    cursor: no-drop;
+    padding: 8px 0px;
+    background-color: rgb(110, 110, 110);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.GameStartBTNWorking {
+    width: 98%;
+    padding: 8px 0px;
+    background-color: rgb(193, 190, 190);
+    border-radius: 14px;
+    text-align: center;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.GameStartBTNWorking:hover {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    font-weight: 600;
+}
+
+.clearBTN {
+    width: 98%;
+    padding: 8px 0px;
+    background-color: rgb(110, 110, 110);
+    border-radius: 14px;
+    text-align: center;
+    cursor: no-drop;
+    transition: all .5s ease;
+}
+
+.readyClearBTN {
+    cursor: pointer;
+    background-color: rgb(193, 190, 190);
+}
+
+.readyClearBTN:hover {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    font-weight: 600;
+}
+
+.game {
+    height: 98%;
+    width: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    transition: all .5s ease;
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
